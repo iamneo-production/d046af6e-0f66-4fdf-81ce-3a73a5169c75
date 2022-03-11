@@ -1,0 +1,51 @@
+#header
+{
+    color:white;
+    background-color:orangered;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1% 1%;
+}
+#signup_heading
+{
+    color: orangered;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    left: 8.25%;
+}
+#signup_box
+{
+    position:relative;
+    left:35%;
+}
+.input_boxes
+{
+    padding: 1.5% 1.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    position:relative;
+    left:5%;
+}
+#login_link
+{
+    color:orange;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+#existing_user_prompt
+{
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    left:7%;
+}
+#signup_button
+{
+    color:white;
+    background-color:orange;
+    font-weight: bolder;
+    position:relative;
+    left:10%;
+    padding:1% 1%;
+    border-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
