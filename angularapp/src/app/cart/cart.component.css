@@ -1,0 +1,27 @@
+#list
+{
+    display:flex;
+    flex-direction: row;
+    gap: 13%;
+    background-color:orangered;
+    padding: 1% 1%;
+    border-radius:10px;
+}
+h3
+{
+    font-family:Arial, Helvetica, sans-serif;
+    color:white;
+    position:relative;
+    left:1%;
+}
+#place_order_button
+{
+    color:white;
+    background-color:orange;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bolder;
+    border-style:none;
+    padding: 2% 2%;
+    position:relative;
+    left: 70%;
+}
