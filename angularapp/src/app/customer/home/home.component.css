@@ -1,0 +1,9 @@
+h1{
+    text-align: center;
+    margin: 4rem;
+    color: orange;
+}
+hr{
+    border-width: 5px;
+    border-color: black;
+}

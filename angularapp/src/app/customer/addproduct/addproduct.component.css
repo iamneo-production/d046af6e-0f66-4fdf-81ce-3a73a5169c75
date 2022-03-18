@@ -1,0 +1,43 @@
+input{
+    margin-bottom: 2rem;
+    border-color: orange;
+    border-radius: 10px;
+    width: 15rem;
+    height: 1.5rem;
+}
+body{
+    text-align: center;
+    color: orange;
+    
+}
+h1{
+    font-weight: bolder;
+}
+#addButton{
+    width: 5rem;
+    height: 2rem;
+    background-color: orange;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+    color: white;
+    
+    text-align: center;
+    text-decoration: none;
+    
+    font-size: 16px;
+    margin: 4px 2px;
+    
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}

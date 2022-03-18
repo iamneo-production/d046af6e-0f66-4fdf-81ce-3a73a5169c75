@@ -1,0 +1,15 @@
+button{
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    padding: 10px;
+}
+.table{
+    border-color: orange;
+    text-align: center;
+  
+}
+div{
+    margin-top: 2rem;
+}
