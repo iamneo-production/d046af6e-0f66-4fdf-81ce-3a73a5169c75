@@ -12,30 +12,33 @@
     <title>Document</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light ">
-    <a class="navbar-brand" href="#" id="title">FoodFox</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item active">
-          <a class="nav-link"  routerLink="/home">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="/cart">Cart</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link"  routerLink="/MyOrders">My Orders</a>
-        </li>
-        <li class="nav-item ">
-          <a class="nav-link " id="logout" routerLink="/login">Logout</a>
-         
-        </li>
-       
-      </ul>
-    </div>
-  </nav>
+  <app-navbar></app-navbar>
+    <div id="myOrderspage" class="container">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Order Id</th>
+                <th scope="col">Items</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quality</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+             
+                <!-- <tr *ngFor="let items of list">
+                    <td>{{items.id}}</td>
+                     <td>{{items.name}}</td>
+                     <td>{{items.quality}}</td>
+                     <td>{{items.price}}</td>
+                     <td>{{items.quality*items.price}}</td>
 
-</body>
-</html>
+                 </tr>
+                <hr/>-->
+          
+            </tbody>
+           
+          </table>
+    </div>
+    </body>
+    </html>

@@ -22,3 +22,8 @@ li{
 #logout{
    margin-left: 45rem;
 }
+#title{
+    text-shadow: 1px 1px black;
+    color:white;
+    font-weight: 500;
+}

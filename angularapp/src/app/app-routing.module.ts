@@ -5,13 +5,15 @@ import { AddproductComponent } from './customer/addproduct/addproduct.component'
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MyordersComponent } from './customer/myorders/myorders.component';
 
 
 const routes: Routes = [
   {path:'add', component: AddproductComponent},
   {path:'update',component: UpdateproductComponent},
   {path:'home',component:HomeComponent},
-  {path:"cart",component:CartComponent}
+  {path:"cart",component:CartComponent},
+  {path:"MyOrders",component:MyordersComponent}
 ]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -8,6 +8,7 @@ import { UpdateproductComponent } from './customer/updateproduct/updateproduct.c
 import { HomeComponent } from './customer/home/home.component';
 import { CartComponent } from './customer/cart/cart.component';
 import { NavbarComponent } from './customer/navbar/navbar.component';
+import { MyordersComponent } from './customer/myorders/myorders.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavbarComponent } from './customer/navbar/navbar.component';
     UpdateproductComponent,
     HomeComponent,
     CartComponent,
-    NavbarComponent
+    NavbarComponent,
+    MyordersComponent
   ],
   imports: [
     BrowserModule,
