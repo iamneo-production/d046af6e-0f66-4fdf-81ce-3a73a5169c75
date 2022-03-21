@@ -1,0 +1,16 @@
+
+a{
+    margin-right: -5rem;
+    color:orange;
+    font-weight: 300;
+    text-shadow: 2px 2px 2px #000000;
+}
+#titles{
+    background-color: orange;
+    color: white;
+    font-weight: 300;
+}
+td{
+    align-content: center;
+    font-weight: bolder;
+}

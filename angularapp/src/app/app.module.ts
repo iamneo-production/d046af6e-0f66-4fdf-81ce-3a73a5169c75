@@ -3,12 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddproductComponent } from './customer/addproduct/addproduct.component';
-import { UpdateproductComponent } from './customer/updateproduct/updateproduct.component';
+import { AddproductComponent } from './admin/addproduct/addproduct.component';
+import { UpdateproductComponent } from './admin/updateproduct/updateproduct.component';
 import { HomeComponent } from './customer/home/home.component';
 import { CartComponent } from './customer/cart/cart.component';
 import { NavbarComponent } from './customer/navbar/navbar.component';
 import { MyordersComponent } from './customer/myorders/myorders.component';
+import { ProductsComponent } from './admin/products/products.component';
+import { OrdersComponent } from './admin/orders/orders.component';
+import { AdminNavbarComponent } from './admin/admin-navbar/admin-navbar.component';
+import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,13 @@ import { MyordersComponent } from './customer/myorders/myorders.component';
     HomeComponent,
     CartComponent,
     NavbarComponent,
-    MyordersComponent
+    MyordersComponent,
+    ProductsComponent,
+    OrdersComponent,
+  
+    AdminNavbarComponent,
+  
+    AdminHomeComponent
   ],
   imports: [
     BrowserModule,
