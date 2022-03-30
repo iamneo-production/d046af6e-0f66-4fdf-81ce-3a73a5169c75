@@ -10,8 +10,8 @@ import javax.persistence.Table;
 @Table(name="Cart")
 public class Cart {
     @Id
-    @Column(name="cartitemId")
-    public String cartId;
+    @GeneratedValue
+    public int cartId;
     @Column(name="UserId")
     public String UserId;
     @Column(name="ProductName")
@@ -20,9 +20,8 @@ public class Cart {
     public String quantity;
     @Column(name="price")
     public String price;
-    public Cart(String cartId, String userId , String productname, String quantity,String price)
+    public Cart(String userId , String productname, String quantity,String price)
     {
-        this.cartId=cartId;
         this.UserId=userId;
         this.productname=productname;
         this.quantity=quantity;

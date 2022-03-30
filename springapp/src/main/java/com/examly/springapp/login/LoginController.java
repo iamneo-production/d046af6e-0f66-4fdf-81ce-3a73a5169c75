@@ -1,4 +1,5 @@
 package com.examly.springapp.customer;
+import java.lang.Iterable;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,19 +13,24 @@ import com.examly.springapp.login.Login;
 import com.examly.springapp.login.LoginRepository;
 import java.util.List;
 @RestController
-@RequestMapping("User")
-public class AccountController {
+// @RequestMapping("User")
+public class LoginController {
     @Autowired
     public AccountRepository accountRepository;
     @Autowired
     public LoginRepository loginRepository;
     // @Bean
-    @PostMapping("signup")
-    public Login signup(@RequestBody Account g)
+    @PostMapping("login")
+    public boolean login(@RequestBody Login g)
     {   
-        accountRepository.save(g);
-        Login login=new Login(g.email,g.password);
-        loginRepository.save(login);
-        return login;
+        Iterable<Login> o=loginRepository.findAll();
+        boolean c=false;
+        for(Login s: o)
+        {   
+            if(s.email.equals(g.email) && s.password.equals(g.password))
+            c=true;
+        }
+        return c;
     }
+    
 }

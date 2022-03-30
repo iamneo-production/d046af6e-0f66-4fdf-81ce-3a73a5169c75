@@ -11,11 +11,11 @@ import javax.persistence.Table;
 public class Product {
     @Id
     @GeneratedValue
-    @Column(name="productId",unique=true)
-    public String productId;
+    // @Column(name="productId",unique=true)
+    public int productId;
     @Column(name="imageURL")
     public String imageURL;
-    @Column(name="productName")
+    @Column(name="productName",unique=true)
     public String productName;
     @Column(name="price")
     public String price;
@@ -23,13 +23,16 @@ public class Product {
     public String description;
     @Column(name="quantity")
     public String quantity;
-    public Product(String productId,String imageURL,String productName,String price,String description,String quantity)
+    public Product(String imageURL,String productName,String price,String description,String quantity)
     {
-        this.productId=productId;
         this.imageURL=imageURL;
         this.productName=productName;
         this.price=price;
         this.description=description;
         this.quantity=quantity;
+    }
+    public Product()
+    {
+        
     }
 }
