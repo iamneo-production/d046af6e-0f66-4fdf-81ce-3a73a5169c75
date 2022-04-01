@@ -17,15 +17,19 @@ public class Cart {
     @Column(name="ProductName")
     public String productname;
     @Column(name="Quantity")
-    public String quantity;
+    public int quantity;
     @Column(name="price")
     public String price;
-    public Cart(String userId , String productname, String quantity,String price)
+    public Cart(String userId , String productname,int quantity,String price)
     {
         this.UserId=userId;
         this.productname=productname;
         this.quantity=quantity;
         this.price=price;
+    }
+    public Cart()
+    {
+        
     }
 
 }
