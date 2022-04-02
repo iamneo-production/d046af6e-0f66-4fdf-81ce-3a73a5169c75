@@ -13,7 +13,7 @@ import { ProductsComponent } from './admin/products/products.component';
 import { OrdersComponent } from './admin/orders/orders.component';
 import { AdminNavbarComponent } from './admin/admin-navbar/admin-navbar.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
-
+import { HttpClientModule } from'@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +32,8 @@ import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
