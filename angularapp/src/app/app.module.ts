@@ -13,7 +13,9 @@ import { ProductsComponent } from './admin/products/products.component';
 import { OrdersComponent } from './admin/orders/orders.component';
 import { AdminNavbarComponent } from './admin/admin-navbar/admin-navbar.component';
 import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
-import { HttpClientModule } from'@angular/common/http'
+import { HttpClientModule } from'@angular/common/http';
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component'
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +30,11 @@ import { HttpClientModule } from'@angular/common/http'
   
     AdminNavbarComponent,
   
-    AdminHomeComponent
+    AdminHomeComponent,
+  
+    SignupComponent,
+  
+    LoginComponent
   ],
   imports: [
     BrowserModule,

@@ -12,8 +12,10 @@ import org.springframework.boot.CommandLineRunner;
 import com.examly.springapp.login.Login;
 import com.examly.springapp.login.LoginRepository;
 import com.examly.springapp.product.ProductRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import com.examly.springapp.product.Product;
 import java.util.List;
+@CrossOrigin(origins="*")
 @RestController
 public class ProductController {
     @Autowired

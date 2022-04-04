@@ -12,12 +12,12 @@
   
     <div>
     <h1>Add Product</h1>
-    <input type="text" placeholder="Enter Product name" id="enterproductName"/><br/>
-    <input type="text" placeholder="Enter price" id="enterPrice"/><br/>
-    <input type="text" placeholder="Enter Description" id="enterDescription"/><br/>
-    <input type="url" placeholder="Enter image url" id="enterImageurl"/><br/>
-    <input type="number" placeholder="Enter Quality " id="enterQuality"/><br/>
-    <input type="submit" value="ADD" id="addButton"/>
+    <input type="text" placeholder="Enter Product name" id="enterproductName" (keyup)="Setproductname($event.target.value)"/><br/>
+    <input type="text" placeholder="Enter price" id="enterPrice" (keyup)="Setprice($event.target.value)"/><br/>
+    <input type="text" placeholder="Enter Description" id="enterDescription" (keyup)="Setdescription($event.target.value)"/><br/>
+    <input type="url" placeholder="Enter image url" id="enterImageurl"(keyup)="Setimageurl($event.target.value)"/><br/>
+    <input type="number" placeholder="Enter Quantity " id="enterQuality" (keyup)="Setquantity($event.target.value)"/><br/>
+    <input type="submit" value="ADD" id="addButton" (click)="add()"/>
     </div>
 
 </body>

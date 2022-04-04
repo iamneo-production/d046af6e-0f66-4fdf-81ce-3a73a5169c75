@@ -11,8 +11,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.boot.CommandLineRunner;
 import com.examly.springapp.login.Login;
 import com.examly.springapp.login.LoginRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.List;
 @RestController
+@CrossOrigin(origins="*")
 // @RequestMapping("User")
 public class LoginController {
     @Autowired

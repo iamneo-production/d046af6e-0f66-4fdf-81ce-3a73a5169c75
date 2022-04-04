@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.context.annotation.Bean;
 import org.springframework.boot.CommandLineRunner;
 import com.examly.springapp.login.Login;
@@ -13,6 +14,7 @@ import com.examly.springapp.login.LoginRepository;
 import java.util.List;
 @RestController
 @RequestMapping("User")
+@CrossOrigin(origins="*")
 public class AccountController {
     @Autowired
     public AccountRepository accountRepository;
@@ -20,11 +22,11 @@ public class AccountController {
     public LoginRepository loginRepository;
     // @Bean
     @PostMapping("signup")
-    public Login signup(@RequestBody Account g)
+    public String signup(@RequestBody Account g)
     {   
         accountRepository.save(g);
         Login login=new Login(g.email,g.password);
         loginRepository.save(login);
-        return login;
+        return "User Registered Sucessfully";
     }
 }
