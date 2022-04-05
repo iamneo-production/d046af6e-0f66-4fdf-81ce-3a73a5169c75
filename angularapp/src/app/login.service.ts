@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {Login} from './login'
+import {ILogindetails} from './logindetails';
 import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
@@ -8,11 +9,9 @@ import { Observable } from 'rxjs';
 export class LoginService {
   message:any;
   constructor(private http: HttpClient) { }
-  LoginAccount(loginDetails:Login): Observable<object>
+  LoginAccount(loginDetails:Login): Observable<ILogindetails[]>
   {
-    let g= this.http.post("https://8080-dcdceabfeafbddeefdebfefcfdfcddebafafd.examlyiopb.examly.io/login",loginDetails,{responseType:'text' as 'json'});
-    g.subscribe((data)=>this.message=data);
-    console.log(this.message);
+    let g= this.http.post<ILogindetails[]>("https://8080-dcdceabfeafbddeefdebfefcfdfcddebafafd.examlyiopb.examly.io/login",loginDetails);
     return g;
   }
 }

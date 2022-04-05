@@ -13,4 +13,14 @@ a{
 td{
     align-content: center;
     font-weight: bolder;
+    justify-content: space-evenly;
+}
+
+img{
+    height: 100;
+    width: 200 ;
+}
+.edit{
+    height="75" width="75" 
+    height: ;
 }

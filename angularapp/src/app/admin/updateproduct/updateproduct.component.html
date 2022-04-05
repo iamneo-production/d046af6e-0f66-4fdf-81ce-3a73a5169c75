@@ -11,12 +11,12 @@
 <body>
     <div>
     <h1>Update Product</h1>
-    <input type="text" placeholder="Enter Product name" id="enterproductName"/><br/>
-    <input type="text" placeholder="Enter price" id="enterPrice"/><br/>
-    <input type="text" placeholder="Enter Description" id="enterDescription"/><br/>
-    <input type="url" placeholder="Enter image url" id="enterImageurl"/><br/>
-    <input type="number" placeholder="Enter Quality " id="enterQuality"/><br/>
-    <input type="submit" value="Update" id="addButton" id='updateButton'/>
+    <input type="text" placeholder="Enter Product name" id="enterproductName" (keyup)="setproductname($event.target.value)"/><br/>
+    <input type="text" placeholder="Enter price" id="enterPrice"(keyup)="setprice($event.target.value)"/><br/>
+    <input type="text" placeholder="Enter Description" id="enterDescription"(keyup)="setdescription($event.target.value)"/><br/>
+    <input type="url" placeholder="Enter image url" id="enterImageurl"(keyup)="setimageurl($event.target.value)"/><br/>
+    <input type="text" placeholder="Enter Quantity " id="enterQuality" (keyup)="setquantty($event.target.value)"/><br/>
+    <input type="submit" value="Update" id="addButton" id='updateButton' (click)="updateproduct()"/>
     </div>
 
 </body>
