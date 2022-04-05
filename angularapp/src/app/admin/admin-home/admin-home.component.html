@@ -39,20 +39,33 @@
                          <button (click)=addProduct()>
                      </td>
                  </tr>-->
-                <tr >
+                <!-- <tr >
                      <td>  <img src="https://static.toiimg.com/thumb/53870704.cms?imgsize=142559&width=800&height=800" height="100" width="200"/></td>
                      <td>Lemon Rice</td>
                      <td> 40</td>
                      <td> 20</td>
                      <td> 
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Edit_font_awesome.svg/1024px-Edit_font_awesome.svg.png" height="75" width="75"(click)="onClick()" class="edit"/>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Edit_font_awesome.svg/1024px-Edit_font_awesome.svg.png" (click)="onClick()" class="edit"/>
                     </td>
                     <td>
-                         <img src="https://media.istockphoto.com/vectors/delete-icon-isolated-vector-vector-id938581716" height="75" width="75" (click)="onDelete()" class="delete"/>
+                         <img src="https://media.istockphoto.com/vectors/delete-icon-isolated-vector-vector-id938581716"  (click)="onDelete()" class="delete"/>
                        
                      </td>
                     </tr>
-                    <hr/>
+                    <hr/> -->
+                <tr *ngFor="let item of productssaved">
+                    <td>  <img src={{item.imageURL}} height="100" width="200"/></td>
+                     <td>{{item.productName}}</td>
+                     <td>{{item.price}}</td>
+                     <td>{{item.quantity}}</td>
+                     <td> 
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Edit_font_awesome.svg/1024px-Edit_font_awesome.svg.png" width="100px" (click)="onClick()" class="edit"/>
+                    </td>
+                    <td>
+                         <img src="https://media.istockphoto.com/vectors/delete-icon-isolated-vector-vector-id938581716"  (click)="onDelete()" width="100px" class="delete"/>
+                       
+                     </td>
+                </tr>
                
             </tbody>
            

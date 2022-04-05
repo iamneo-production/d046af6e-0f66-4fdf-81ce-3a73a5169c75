@@ -1,6 +1,9 @@
 export class ShowProduct {
-    Image_url: string;
-    name: string;
-    cost: number;
+    productId:number;
+    imageURL: string;
+    productName: string;
+    price: string;
+    description:string;
+    quantity:string;
 }
 

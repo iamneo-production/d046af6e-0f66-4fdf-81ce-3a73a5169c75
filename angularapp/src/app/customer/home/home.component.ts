@@ -7,7 +7,7 @@ import { ShowProductService } from '../../service/show-product.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  products:any;
+  public products=[];
   constructor(private service:ShowProductService) { }
 
   ngOnInit(): void {
