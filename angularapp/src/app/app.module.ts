@@ -15,6 +15,7 @@ import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { HttpClientModule } from'@angular/common/http';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component'
+import { AuthguardServiceService } from './authguard-service.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,7 +41,9 @@ import { LoginComponent } from './login/login.component'
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    AuthguardServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -8,14 +8,16 @@ hr{
     border-color: black;
 }
 .product{
+    margin-left: 1rem;
     display: grid;
     column-gap: 30px;
     row-gap: 10px;
-    background-color: rgba(255, 196, 0);
-    padding:5px
+    background-color: rgba(255, 196, 0, 0.637);
+    padding:5px;
+    border-radius: 3rem;
 }
 .products{
-    border:1px solid rgba(0, 0, 0, 0.8);
+    border:1px;
     border-radius: 3px;
     text-align: center;
     font-size: 30px;
@@ -25,4 +27,5 @@ hr{
       margin-left: auto;
         margin-right: auto;
           width: 50%;
+          height: 5rem;
 }

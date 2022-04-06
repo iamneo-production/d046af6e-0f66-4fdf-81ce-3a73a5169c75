@@ -10,14 +10,16 @@ import { AdminHomeComponent } from './admin/admin-home/admin-home.component';
 import { OrdersComponent } from './admin/orders/orders.component';
 import { SignupComponent } from './signup/signup.component'
 import { LoginComponent } from './login/login.component'
+import { AuthGuard } from './auth.guard';
 const routes: Routes = [
-  {path:"admin/addProduct", component: AddproductComponent},
-  {path:"admin/updateProduct",component: UpdateproductComponent},
-  {path:"customer/home",component:HomeComponent},
-  {path:"customer/cart",component:CartComponent},
-  {path:"customer/MyOrders",component:MyordersComponent},
-  {path:"admin/home",component:AdminHomeComponent},
-  {path:"admin/order",component:OrdersComponent},
+ 
+  {path:"admin/addProduct", component: AddproductComponent,canActivate:[AuthGuard]},
+  {path:"admin/updateProduct",component: UpdateproductComponent,canActivate:[AuthGuard]},
+  {path:"customer/home",component:HomeComponent,canActivate:[AuthGuard]},
+  {path:"customer/cart",component:CartComponent,canActivate:[AuthGuard]},
+  {path:"customer/MyOrders",component:MyordersComponent,canActivate:[AuthGuard]},
+  {path:"admin/home",component:AdminHomeComponent,canActivate:[AuthGuard]},
+  {path:"admin/order",component:OrdersComponent,canActivate:[AuthGuard]},
   {path:"signup",component:SignupComponent},
   {path:"",component:LoginComponent}
 ]
