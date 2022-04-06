@@ -16,12 +16,12 @@
         <h1>Welcome to Food Fox</h1>
         <hr/>
        <div class="row">
-           <div  *ngFor="let item of products" class="col-md-3">
-                <div class="row">
-                   <img src={{item.imageURL}} height="100" width="200"/><br/>
+           <div  *ngFor="let item of products" class="col-md-3 products">
+                <div  class="row product">
+                   <img src={{item.imageURL}} alt="productName" height="90" width="200" class="product_image"><br/>
                     {{item.productName}}<br/>
                     Rs.{{item.price}}<br/>
-                    <button class="addtocart" (click)=addtocart()>Add To Cart</button>
+                    <button class="addtocart" (click)="addtocart(item)">Add To Cart</button>
                 </div>
             </div>
         </div>

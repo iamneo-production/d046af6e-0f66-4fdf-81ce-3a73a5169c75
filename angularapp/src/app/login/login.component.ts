@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 import {Router} from '@angular/router';
 import { Login } from '../login';
 import { LoginService } from '../login.service';
+import { SharedserviceService } from '../sharedservice.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,18 +10,22 @@ import { LoginService } from '../login.service';
 })
 export class LoginComponent implements OnInit {
   login:Login=new Login()
+  email:any="Hello World";
+  password:any;
   public accounts =[]
-  constructor(private router: Router,private service:LoginService) {
+  constructor(private router: Router,private service:LoginService,private sharedservice:SharedserviceService) {
    }
   setEmail(val:any)
   {
     this.login.email=val;
-    console.log(this.login.email)
+    this.email=val;
+    console.log(this.email)
   }
   setPassword(val:any)
   {
     this.login.password=val;
-    console.log(this.login.password)
+    this.password=val;
+    console.log(this.password)
   }
   go()
   {
@@ -45,6 +50,7 @@ export class LoginComponent implements OnInit {
       }
       if(c>0)
       {
+        this.sharedservice.setaccount(this.email);
         this.router.navigateByUrl("/customer/home");
       }
       else

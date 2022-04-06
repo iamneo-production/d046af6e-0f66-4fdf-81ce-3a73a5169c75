@@ -17,9 +17,9 @@ td{
     
 }
 
-img{
-    height: 100;
-    width: 200 ;
+#product_image{
+    height: 50;
+    width: 50 ;
 }
 .edit{
    height: 75;

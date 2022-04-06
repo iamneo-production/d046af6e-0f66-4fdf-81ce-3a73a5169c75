@@ -8,6 +8,7 @@ import { ShowProductService } from 'src/app/service/show-product.service';
 })
 export class AdminHomeComponent implements OnInit {
   public productssaved=[]
+  message:any;
   constructor(private router: Router, private service:ShowProductService) {
     
    }
