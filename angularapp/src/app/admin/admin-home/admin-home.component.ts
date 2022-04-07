@@ -18,7 +18,7 @@ export class AdminHomeComponent implements OnInit {
    onDelete(value:any){
       let g=this.service.deleteproduct(value.productId);
       g.subscribe(data=>this.message=data);
-      alert("product deleted sucessfully");
+      alert("product deleted sucessfully,please refresh the page");
    }
   ngOnInit(): void {
     let g=this.service.showProduct();
