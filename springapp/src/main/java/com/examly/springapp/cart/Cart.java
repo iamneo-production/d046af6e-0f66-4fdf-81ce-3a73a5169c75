@@ -1,35 +1,61 @@
-package com.examly.springapp.cart;
-
-import java.lang.annotation.Inherited;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-@Entity
-@Table(name="Cart")
-public class Cart {
-    @Id
-    @GeneratedValue
-    public int cartId;
-    @Column(name="UserId")
-    public String UserId;
-    @Column(name="ProductName")
-    public String productname;
-    @Column(name="Quantity")
-    public int quantity;
-    @Column(name="price")
-    public String price;
-    public Cart(String userId , String productname,int quantity,String price)
+package com.examly.springapp.customer;
+import java.lang.Iterable;
+import java.util.*;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.context.annotation.Bean;
+import org.springframework.boot.CommandLineRunner;
+import com.examly.springapp.login.Login;
+import com.examly.springapp.login.LoginRepository;
+import com.examly.springapp.cart.CartRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import com.examly.springapp.cart.Cart;
+import java.util.List;
+@CrossOrigin(origins="*")
+@RestController
+public class CartController {
+    @Autowired
+    public CartRepository cartRepository;
+    @PostMapping("addtocart")
+    public Cart addtocart(@RequestBody Cart g)
     {
-        this.UserId=userId;
-        this.productname=productname;
-        this.quantity=quantity;
-        this.price=price;
+        Iterable<Cart> o=cartRepository.findAll();
+        for(Cart s: o)
+        {
+            if(s.UserId.equals(g.UserId) && s.productname.equals(g.productname))
+            {
+                s.quantity+=1;
+                cartRepository.save(s);
+                return s;
+            }
+        }
+        cartRepository.save(g);
+        return g;
     }
-    public Cart()
+    @PostMapping("showcart")
+    public List<Cart> showcart(@RequestBody String User)
     {
-        
+        Iterable<Cart> o=cartRepository.findAll();
+        // return o;
+        List<Cart> p = new ArrayList<Cart>();
+        for(Cart s:o)
+        {   
+            if(s.UserId.equals(User))
+            {
+                p.add(s);
+            }
+        }
+        return p;
     }
-
+    @PostMapping("deletecart")
+    public boolean delete(@RequestBody int id1)
+    {
+        cartRepository.deleteById(id1);
+        return true;
+    }
 }
