@@ -11,8 +11,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.boot.CommandLineRunner;
 import com.examly.springapp.login.Login;
 import com.examly.springapp.login.LoginRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.List;
+import java.util.*;
 @RestController
+@CrossOrigin(origins="*")
 // @RequestMapping("User")
 public class LoginController {
     @Autowired
@@ -21,16 +24,15 @@ public class LoginController {
     public LoginRepository loginRepository;
     // @Bean
     @PostMapping("login")
-    public boolean login(@RequestBody Login g)
+    public List<Login> login(@RequestBody Login g)
     {   
         Iterable<Login> o=loginRepository.findAll();
-        boolean c=false;
+        List<Login> p= new ArrayList<Login>();
         for(Login s: o)
         {   
-            if(s.email.equals(g.email) && s.password.equals(g.password))
-            c=true;
+            p.add(s);
         }
-        return c;
+        return p;
     }
     
 }
