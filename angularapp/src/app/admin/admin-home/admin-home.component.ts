@@ -15,8 +15,10 @@ export class AdminHomeComponent implements OnInit {
    onClick(){
     this.router.navigateByUrl("/admin/updateProduct")
    }
-   onDelete(){
-     console.log("delete");
+   onDelete(value:any){
+      let g=this.service.deleteproduct(value.productId);
+      g.subscribe(data=>this.message=data);
+      alert("product deleted sucessfully");
    }
   ngOnInit(): void {
     let g=this.service.showProduct();

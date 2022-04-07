@@ -20,4 +20,9 @@ export class ShowProductService {
     console.log(this.message,g)
     return g;
   }
+  deleteproduct(value:any):Observable<object>
+  {
+    let g=this.http.post("https://8080-dcdceabfeafbddeefdebfefcfdfcddebafafd.examlyiopb.examly.io/deleteproduct",value,{responseType:'text' as 'json'});
+    return g;
+  }
 }
