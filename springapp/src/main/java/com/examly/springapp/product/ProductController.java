@@ -12,8 +12,11 @@ import org.springframework.boot.CommandLineRunner;
 import com.examly.springapp.login.Login;
 import com.examly.springapp.login.LoginRepository;
 import com.examly.springapp.product.ProductRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import com.examly.springapp.product.Product;
 import java.util.List;
+import java.util.*;
+@CrossOrigin(origins="*")
 @RestController
 public class ProductController {
     @Autowired
@@ -25,10 +28,15 @@ public class ProductController {
         return g;
     }
     @GetMapping("getproduct")
-    public Iterable<Product> getProduct()
+    public List<Product> getProduct()
     {
         Iterable<Product> o=productRepository.findAll();
-        return o;
+        List<Product> p=new ArrayList<Product>();
+        for(Product s:o)
+        {
+            p.add(s);
+        }
+        return p;
     }
     @GetMapping("producteditdata")
     public Product ProductEditData(@RequestBody int id1)
