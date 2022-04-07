@@ -13,8 +13,10 @@ import org.springframework.boot.CommandLineRunner;
 import com.examly.springapp.login.Login;
 import com.examly.springapp.login.LoginRepository;
 import com.examly.springapp.cart.CartRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import com.examly.springapp.cart.Cart;
 import java.util.List;
+@CrossOrigin(origins="*")
 @RestController
 public class CartController {
     @Autowired
@@ -35,7 +37,7 @@ public class CartController {
         cartRepository.save(g);
         return g;
     }
-    @GetMapping("showcart")
+    @PostMapping("showcart")
     public List<Cart> showcart(@RequestBody String User)
     {
         Iterable<Cart> o=cartRepository.findAll();
