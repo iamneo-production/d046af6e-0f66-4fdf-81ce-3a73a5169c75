@@ -35,4 +35,10 @@ public class Product {
     {
         
     }
+    public Product(String imageURL,String productName,String price)
+    {
+        this.imageURL=imageURL;
+        this.productName=productName;
+        this.price=price;
+    }
 }
