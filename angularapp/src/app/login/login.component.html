@@ -1,0 +1,12 @@
+<h1 id="header" >FoodFox</h1>
+<div id ="login_box">
+    <h1 id="heading_login">Login</h1>
+    <br>
+    <input type="text" id="email" class="input_boxes" placeholder="Enter email" (keyup)="setEmail($event.target.value)">
+    <br><br>
+    <input type="password" id="password" class="input_boxes" placeholder="Enter Password" (keyup)="setPassword($event.target.value)">
+    <br><br>
+    <button id="login_button" (click)="go()">Login</button>
+    <br><br>
+    <h4 id="new_user_prompt">New User?  <a routerLink="/signup" id="signup_link">Sign up</a> </h4> 
+</div>

@@ -1,0 +1,31 @@
+input{
+    margin-bottom: 2rem;
+    border-color: orange;
+    border-radius: 10px;
+    width: 15rem;
+    height: 2rem;
+}
+body{
+    text-align: center;
+    color: orange;
+    
+}
+h1{
+    font-weight: bolder;
+    margin: 15px auto 15px auto;
+}
+#updateButton{
+    width: 5rem;
+    height: 2rem;
+    background-color: orange;
+    border: none;
+    border-radius: 10px 10px 10px 10px;
+    color: white;
+    
+    text-align: center;
+    text-decoration: none;
+    
+    font-size: 16px;
+    margin: 4px 2px;
+    
+}

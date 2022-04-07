@@ -1,0 +1,29 @@
+nav{
+    background-color: orange;
+    color: white;
+}
+a{
+    color:white;
+    font-size: large;
+}
+ul{
+    margin-left: 5rem;
+}
+li{
+    margin-left: 2rem;
+}
+#logoutButton{
+    margin-left: 45rem;
+    
+}
+.home{
+    color: black;
+}
+#logout{
+   margin-left: 55rem;
+}
+#title{
+    text-shadow: 1px 1px black;
+    color:white;
+    font-weight: 500;
+}
