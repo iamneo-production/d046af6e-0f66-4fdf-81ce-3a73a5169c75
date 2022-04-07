@@ -17,22 +17,23 @@
             <thead>
               <tr>
                 <th scope="col">Item</th>
-        <th scope="col">Quality</th>
+        <th scope="col">Quantity</th>
                 <th scope="col">Price</th>
                 <th scope="col">Total</th>
               </tr>
             </thead>
             <tbody>
              
-                <!-- <tr *ngFor="let items of list">
-                     <td>{{items.name}}</td>
-                     <td>{{items.quality}}</td>
+                <tr *ngFor="let items of cartitems">
+                     <td>{{items.productname}}</td>
+                     <td>{{items.quantity}}</td>
                      <td>{{items.price}}</td>
-                     <td>{{items.quality*items.price}}</td>
-                 </tr>-->
+                     <td>{{items.quantity*convert(items.price)}}</td>
+                     <td><button (click)="select(items)">select</button><br><br><button (click)="delete(items)">Delete</button></td>
+                 </tr>
           
             </tbody>
-            <button id="placeOrderButton">Place Order</button>
+            <button id="placeOrderButton" (click)="placeOrder()">Place Order</button>
           </table>
     </div>
     </body>

@@ -19,21 +19,21 @@
               <tr>
                 <th scope="col">Order Id</th>
                 <th scope="col">Items</th>
+                <th scope="col">Quantity</th>
                 <th scope="col">Price</th>
-                <th scope="col">Quality</th>
                 <th scope="col">Total</th>
               </tr>
             </thead>
             <tbody>
              
-                <!-- <tr *ngFor="let items of list">
-                    <td>{{items.id}}</td>
-                     <td>{{items.name}}</td>
-                     <td>{{items.quality}}</td>
-                     <td>{{items.price}}</td>
-                     <td>{{items.quality*items.price}}</td>
+              <tr *ngFor="let items of orderdetails">
+                <td>{{items.id}}</td>
+                 <td>{{items.ProductName}}</td>
+                 <td>{{items.quantity}}</td>
+                 <td>{{items.Price/items.quantity}}</td>
+                 <td>{{items.Price}}</td>
 
-                 </tr>
+             </tr>
                 <hr/>-->
           
             </tbody>

@@ -37,7 +37,7 @@ public class CartController {
         cartRepository.save(g);
         return g;
     }
-    @GetMapping("showcart")
+    @PostMapping("showcart")
     public List<Cart> showcart(@RequestBody String User)
     {
         Iterable<Cart> o=cartRepository.findAll();

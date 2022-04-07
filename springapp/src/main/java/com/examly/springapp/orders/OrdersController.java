@@ -15,8 +15,10 @@ import com.examly.springapp.login.LoginRepository;
 import com.examly.springapp.cart.CartRepository;
 import com.examly.springapp.orders.OrdersRepository;
 import com.examly.springapp.orders.Orders;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import com.examly.springapp.cart.Cart;
 import java.util.List;
+@CrossOrigin(origins="*")
 @RestController
 public class OrdersController {
     @Autowired
@@ -30,7 +32,7 @@ public class OrdersController {
         cartRepository.deleteById(o.id);
         return o;
     }
-    @GetMapping("getorders")
+    @PostMapping("getorders")
     public List<Orders> getorders(@RequestBody String user)
     {
         Iterable<Orders> o= ordersRepository.findAll();
@@ -41,6 +43,17 @@ public class OrdersController {
             {
                 p.add(s);
             }
+        }
+        return p;
+    }
+    @GetMapping("vieworders")
+    public List<Orders> vieworders()
+    {
+        Iterable<Orders> o= ordersRepository.findAll();
+        List<Orders> p =new ArrayList<Orders>();
+        for(Orders s: o)
+        {
+            p.add(s);
         }
         return p;
     }
